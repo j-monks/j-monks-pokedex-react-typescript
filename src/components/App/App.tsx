@@ -1,7 +1,7 @@
 import React from 'react';
 import Pokedex from '../Pokedex/Pokedex';
 import './App.css';
-import { pokemonData } from './data/pokemonData';
+import { pokemonData } from '../../data/pokemonData';
 
 interface AppState {
     searchField: string;
