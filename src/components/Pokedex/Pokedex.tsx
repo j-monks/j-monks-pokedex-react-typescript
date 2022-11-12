@@ -6,14 +6,17 @@ import SearchBox from '../SearchBox/SearchBox';
 import "./Pokedex.css";
 
 interface PokedexProps {
-    searchPokemons: PokemonSchema[]
+    searchPokemons: PokemonSchema[],
+    onInputChange: (inputValue: string) => void
 }
 
-const Pokedex = ({ searchPokemons }: PokedexProps) => {
+const Pokedex = ({ searchPokemons, onInputChange }: PokedexProps) => {
     return (
         <div className="pokedex-container">
             <div className="pokelist-container">
-                <SearchBox />
+                <SearchBox
+                    onInputChange={onInputChange}
+                />
                 <Pokelist
                     searchPokemons={searchPokemons}
                 />
