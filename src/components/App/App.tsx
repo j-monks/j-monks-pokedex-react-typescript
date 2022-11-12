@@ -59,7 +59,9 @@ class App extends React.Component<any, AppState> {
     render() {
         return <div className='App'>
             <h1>Pokedex</h1>
-            <Pokedex />
+            <Pokedex
+                searchPokemons={ this.state.searchPokemon }
+            />
         </div>;
     }
 }

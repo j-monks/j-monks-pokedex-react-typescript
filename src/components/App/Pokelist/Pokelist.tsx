@@ -1,14 +1,29 @@
+import { PokemonSchema } from '../../../types/PokemonSchema';
 import Pokecard from '../../Pokecard/Pokecard';
 import './Pokelist.css'
 
-const Pokelist = () => {
+interface PokelistProps {
+    searchPokemons: PokemonSchema[]
+}
+
+
+const Pokelist = ({ searchPokemons }: PokelistProps) => {
     return (
         <div className="pokelist">
-            <Pokecard name="Pikachu" />
-            <Pokecard name="Bulbasaur" />
-            <Pokecard name="Ivysaur" />
-            <Pokecard name="Venasaur" />
-            <Pokecard name="Charizard" />
+            {
+                searchPokemons.map(pokemon => {
+                    return (
+                        // If pokemon.name is present return pokeCard
+                        pokemon.name && (
+                            <Pokecard
+                                key={pokemon.id}
+                                name={pokemon.name}
+                                spriteUrl={pokemon.sprites.normal}
+                            />
+                        )
+                    )
+                })
+            }
         </div>
     );
 }
