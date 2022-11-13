@@ -8,7 +8,7 @@ interface PokecardProps {
 
  const Pokecard = ({spriteUrl, name, onClickPokemon}: PokecardProps) => {
     return (
-        <div onClick={() => onClickPokemon(name)} className="pokecard">
+        <div data-testid={`pokecard-${name}`} onClick={() => onClickPokemon(name)} className="pokecard">
             <img className="pokemon-sprite" src={spriteUrl} alt="pokemon" />
             <p>{ name }</p>
         </div>
