@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="pokecard"
+  data-testid="pokecard-bulbasaur"
+  onClick={[Function]}
+>
+  <img
+    alt="pokemon"
+    className="pokemon-sprite"
+    src="http://img.pokemondb.net/sprites/black-white/normal/bulbasaur.png"
+  />
+  <p>
+    bulbasaur
+  </p>
+</div>
+`;
